@@ -7,7 +7,7 @@
 
   <!-- Page d'accueil - site one-page -->
   <url>
-    <loc>https://taxilemans.fr/</loc>
+    <loc>https://www.taxilemans.fr/</loc>
     <lastmod>2025-10-12T12:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
