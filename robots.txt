@@ -8,6 +8,7 @@ Disallow: /wcb/wcb
 Disallow: /*/wcb/wcb
 
 # Bloquer certains bots agressifs ( connus )
+
 User-agent: AhrefsBot
 Disallow: /
 
@@ -18,6 +19,9 @@ User-agent: Dotbot
 Disallow: /
 
 User-agent: SemrushBot
+Disallow: /
+
+User-agent: BLEXBot
 Disallow: /
 
 # Sitemap (URL absolue, accessible, valide)
