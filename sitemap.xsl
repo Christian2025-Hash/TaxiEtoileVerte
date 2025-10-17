@@ -10,10 +10,54 @@
       <head>
         <title>Sitemap</title>
         <style type="text/css">
-          body { font-family: Arial, sans-serif; background: #f9f9f9; }
-          table { border-collapse: collapse; width: 100%; }
-          th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-          th { background-color: #eee; }
+          body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #fff;
+            color: #333;
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 0 15px;
+          }
+          h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+          }
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+          }
+          th, td {
+            padding: 10px 12px;
+            text-align: left;
+            font-size: 14px;
+          }
+          th {
+            background: #2980b9;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+          }
+          tr:nth-child(even) {
+            background: #f4f6f8;
+          }
+          tr:hover {
+            background: #d6e9fb;
+            transition: background-color 0.3s ease;
+          }
+          td a {
+            color: #2980b9;
+            text-decoration: none;
+            word-break: break-word;
+          }
+          td a:hover {
+            text-decoration: underline;
+          }
         </style>
       </head>
       <body>
@@ -27,7 +71,14 @@
           </tr>
           <xsl:for-each select="//s:url">
             <tr>
-              <td><xsl:value-of select="s:loc"/></td>
+              <td>
+                <a target="_blank">
+                  <xsl:attribute name="href">
+                    <xsl:value-of select="s:loc"/>
+                  </xsl:attribute>
+                  <xsl:value-of select="s:loc"/>
+                </a>
+              </td>
               <td><xsl:value-of select="s:lastmod"/></td>
               <td><xsl:value-of select="s:changefreq"/></td>
               <td><xsl:value-of select="s:priority"/></td>
@@ -37,5 +88,6 @@
       </body>
     </html>
   </xsl:template>
+
 </xsl:stylesheet>
 
