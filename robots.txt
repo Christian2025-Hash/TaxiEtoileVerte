@@ -1,8 +1,27 @@
+# Bloquer l’accès aux dossiers sensibles pour tous les bots
 User-agent: *
 Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /junk/
 Disallow: /wcb/wcb
 Disallow: /*/wcb/wcb
-User-agent: Googlebot
-Disallow: /admin/
+
+# Bloquer certains bots agressifs ( connus )
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: Dotbot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Sitemap (URL absolue, accessible, valide)
 Sitemap: https://www.taxilemans.fr/sitemap.xml
-Crawl-delay: 2
+
+# Crawl-delay pour bots autres que Google (évite surcharge serveur)
+# Crawl-delay: 2
